@@ -11,11 +11,19 @@
   - @media
 */
 
+* {
+  box-sizing: border-box;   
+  /*
+   * margin: 0px;  
+   * padding: 0px;
+   *
+   */
+}
 body {
   background-color: #333;
   font: 15px/1.4 Helvetica, Arial, sans-serif;
   margin: 0;
-  width:900px;
+  max-width:900px;
   margin:auto;
   padding: 25px 25px 50px;
 }
@@ -116,4 +124,21 @@ a {
     display: inline;
     margin-right: 15px;
     padding-right: 15px;
+  }
+
+  @media screen and (max-width:500px) {
+    .nav {
+      margin:0;
+      width: 100%;
+    }
+
+    .nav li {
+      border-right: 1px solid black;
+      display: inline-block;
+    }
+
+    .main {
+      width: 100%;
+      padding: 0 10px;
+    }
   }
